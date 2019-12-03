@@ -1,14 +1,13 @@
 function collatz(n)
-    len = 0
-    while n != 1
+    if n == 1
+        return 0
+    else
         if n % 2 == 0
-            n /= 2
+            return collatz(n/2) + 1
         else
-            n = (3*n) + 1
+            return collatz(3*n + 1) + 1
         end
-        len += 1
     end
-    return len
 end
 
 print("Enter the upper bound: ")
