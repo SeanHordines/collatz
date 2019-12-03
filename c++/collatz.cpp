@@ -1,0 +1,65 @@
+#include <iostream>
+#include <tuple>
+#include <vector>
+#include <bits/stdc++.h>
+using namespace std;
+
+long collatz(long n)
+{
+    int len = 0;
+    while(n != 1)
+    {
+        if(n % 2 == 0)
+        {
+            n /= 2;
+        }
+        else
+        {
+            n = (3*n) + 1;
+        }
+        len += 1;
+    }
+    return len;
+}
+
+bool sort2(const tuple<long, long>& a, const tuple<long, long>& b)
+{
+    return (get<1>(a) < get<1>(b));
+}
+
+int main()
+{
+    cout << "Enter the upper bound: ";
+    long n;
+    cin >> n;
+    vector<tuple<long, long>> largest;
+    largest.push_back(make_tuple(1, 0));
+
+    for(long i = 1; i <= n; i++)
+    {
+        long l = collatz(i);
+        tuple<long, long> temp = largest.at(0);
+        
+        if(l > get<1>(temp))
+        {
+            if(largest.size() >= 10)
+            {
+                largest.erase(largest.begin());
+            }
+            largest.push_back(make_tuple(i, l));
+            sort(largest.begin(), largest.end());
+            sort(largest.begin(), largest.end(), sort2);
+        }
+    }
+
+    sort(largest.begin(), largest.end());
+    reverse(largest.begin(), largest.end());
+    sort(largest.begin(), largest.end(), sort2);
+    reverse(largest.begin(), largest.end());
+    for(int i = 0; i < largest.size(); i++)
+    {
+        cout << get<0>(largest.at(i)) << " " << get<1>(largest.at(i)) << endl;
+    }
+
+    return 0;
+}

@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Collatz
+public class Recur
 {
     public static void main(String[] args)
     {
@@ -58,19 +58,20 @@ public class Collatz
 
     public static Long collatz(Long n)
     {
-        Long len = 0l;
-        while(n != 1)
+        if(n == 1)
+        {
+            return 0l;
+        }
+        else
         {
             if(n % 2 == 0)
             {
-                n /= 2;
+                return collatz(n/2) + 1;
             }
             else
             {
-                n = (3*n) + 1;
+                return collatz(3*n + 1) + 1;
             }
-            len += 1;
         }
-        return len;
     }
 }

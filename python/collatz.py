@@ -1,6 +1,6 @@
 n = int(input("Enter the upper bound: "))
 
-largest = [(1, 1)]
+largest = [(1, 0)]
 
 def collatz(num):
     len = 0
@@ -23,4 +23,5 @@ for i in range(1, n+1):
         largest.sort(key=lambda l:l[0])
         largest.sort(key=lambda l:l[1], reverse = True)
 
-print(largest)
+for i in range(len(largest)):
+    print(largest[i][0], largest[i][1])

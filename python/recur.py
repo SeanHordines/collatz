@@ -22,4 +22,5 @@ for i in range(1, n+1):
         largest.sort(key=lambda l:l[0])
         largest.sort(key=lambda l:l[1], reverse = True)
 
-print(largest)
+for i in range(len(largest)):
+    print(largest[i][0], largest[i][1])
