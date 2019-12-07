@@ -80,7 +80,7 @@ D a-textio.ads		20190108095404 881db35a ada.text_io%s
 D a-tiinio.ads		20190108095404 aa04e5d6 ada.text_io.integer_io%s
 D a-unccon.ads		20170908151217 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20170908151217 eff36322 ada.unchecked_deallocation%s
-D collatz.adb		20191205003451 3ea155e6 collatz%b
+D collatz.adb		20191207030815 3ea155e6 collatz%b
 D interfac.ads		20190108095404 5ab55268 interfaces%s
 D i-cstrea.ads		20190108095404 e53d8b8e interfaces.c_streams%s
 D system.ads		20190108095404 4635ec04 system%s
@@ -111,62 +111,62 @@ D s-traent.ads		20190108095404 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190108095404 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20190108095404 1b7d22d2 system.wch_con%s
 X 1 ada.ads
-16K9*Ada 20e8 22|1r6 1r19 1r45 1r61 2r5 8r34 40r5 41r5 62r9 63r9
+16K9*Ada 20e8 22|1r6 1r19 1r45 1r61 2r5 10r34 46r5 47r5 79r9 80r9
 X 2 a-contai.ads
-16K13*Containers 24e19 22|1w49 1r65 2r9 8r38
+16K13*Containers 24e19 22|1w49 1r65 2r9 10r38
 20I9*Count_Type<integer>
 X 3 a-cgarso.ads
 24u26*Generic_Array_Sort 2|16k13
 X 4 a-cgarso.adb
-41U14 Sort[5|24] 6|34b26[10|856[22|19]]
+41U14 Sort[5|24] 6|34b26[10|856[22|22]]
 X 5 a-cgcaso.ads
 24u26*Generic_Constrained_Array_Sort 2|16k13
 X 9 a-convec.ads
-61I9 Index_Type 22|8r57
-62+9 Element_Type 22|8r80
-73k24*Vectors 824e27 22|1w76 8r49
+61I9 Index_Type 22|10r57
+62+9 Element_Type 22|10r80
+73k24*Vectors 824e27 22|1w76 10r49
 78I12 Extended_Index{integer}
-88R9 Vector<12|43R9> 22|21r15[8]
-165V13 Length{2|20I9} 22|50s16[8]
-196V13 Element{22|7A10} 22|47s17[8] 62s53[8] 63s58[8]
-207U14 Replace_Element 22|51s17[8]
-431U14 Append 22|43s13[8] 53s25[8]
-498U14 Reverse_Elements 22|59s5[8]
-512V13 First_Index{integer} 22|61s22[8]
-522V13 Last_Index{78I12[22|8]} 22|61s45[8]
-637k12 Generic_Sorting 22|19r48[8]
-644U17 Sort 22|55s27[19]
+88R9 Vector<12|43R9> 22|24r15[10]
+165V13 Length{2|20I9} 22|60s16[10]
+196V13 Element{22|9A10} 22|56s17[10] 79s53[10] 80s58[10]
+207U14 Replace_Element 22|62s17[10]
+431U14 Append 22|49s13[10] 65s25[10]
+498U14 Reverse_Elements 22|75s5[10]
+512V13 First_Index{integer} 22|78s22[10]
+522V13 Last_Index{78I12[22|10]} 22|78s45[10]
+637k12 Generic_Sorting 22|22r48[10]
+644U17 Sort 22|69s27[22]
 X 10 a-convec.adb
-856U20 Sort[3|24] 4|32b26[22|19]
+856U20 Sort[3|24] 4|32b26[22|22]
 X 14 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[9|111]>
 X 15 a-liteio.ads
-18K13*Long_Integer_Text_IO[19|46] 22|1w23 41r9
+18K13*Long_Integer_Text_IO[19|46] 22|1w23 47r9
 X 18 a-textio.ads
-49K13*Text_IO 471e16 22|1w10 40r9 62r13 63r13
-242U14*Put 22|40s17 62s21
-263U14*Put_Line 22|63s21
+49K13*Text_IO 471e16 22|1w10 46r9 79r13 80r13
+242U14*Put 22|46s17 79s21
+263U14*Put_Line 22|80s21
 X 19 a-tiinio.ads
-56U14*Get 22|41s30[15|18]
+56U14*Get 22|47s30[15|18]
 X 22 collatz.adb
-4U11*collatz 4b11 66l5 66t12
-5i5 n{long_integer} 41m34 45r19
-5i8 l{long_integer} 27m9 35m13 35r18 37r16 46m9 49r12 51r49 53r36
-5i11 temp{long_integer} 47m9 49r16
-7A10 Tuple(long_integer)<integer> 8r96 11r24
-8K13 BetterVectors[9|73] 9r9 19r34
-11V14 c1{boolean} 11b14 11>17 11>20 18l9 18t11 19r64
-11a17 a{7A10} 13r12 14r21 16r21
-11a20 b{7A10} 13r19 14r28 16r28
-19K13 VectorSorting[9|637] 55r13
-21r5 largest{9|88R9[8]} 43m5 43r5 47r25 50r23 51m33 51r33 53m17 53r17 55m32
-. 55r32 59m22 59r22 61r14 61r37 62r45 63r50
-23V14 getSeqLen{long_integer} 23b14 23>25 38l9 38t18 46s14
-23i25 num{long_integer} 26r14
-24i9 n{long_integer} 26m9 29r15 30r16 31m17 31r22 33m17 33r25
-45i9 i{long_integer} 46r24 51r46 53r33
-61i9 i{integer} 62r61 63r66
+4U11*collatz 4b11 83l5 83t12
+5i5 n{long_integer} 47m34 52r19
+5i8 l{long_integer} 32m9 40m13 40r18 42r16 54m9 59r12 62r49 65r36
+5i11 temp{long_integer} 56m9 59r16
+9A10 Tuple(long_integer)<integer> 10r96 14r24
+10K13 BetterVectors[9|73] 11r9 22r34
+14V14 c1{boolean} 14b14 14>17 14>20 21l9 21t11 22r64
+14a17 a{9A10} 16r12 17r21 19r21
+14a20 b{9A10} 16r19 17r28 19r28
+22K13 VectorSorting[9|637] 69r13
+24r5 largest{9|88R9[10]} 49m5 49r5 56r25 60r23 62m33 62r33 65m17 65r17 69m32
+. 69r32 75m22 75r22 78r14 78r37 79r45 80r50
+28V14 getSeqLen{long_integer} 28b14 28>25 43l9 43t18 54s14
+28i25 num{long_integer} 31r14
+29i9 n{long_integer} 31m9 34r15 35r16 36m17 36r22 38m17 38r25
+52i9 i{long_integer} 54r24 62r46 65r33
+78i9 i{integer} 79r61 80r66
 X 25 system.ads
 67M9*Address
 X 36 s-memory.ads
